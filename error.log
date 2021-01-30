@@ -1,5 +1,5 @@
 Undefined symbols for architecture x86_64:
-  "Model::Model(int, int, int, std::__1::vector<std::__1::pair<int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::pair<int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >)", referenced from:
-      _main in main-d93cc1.o
+  "__ZN5ModelC1EiiiSt6vectorISt4pairIiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEESaIS8_EES7_", referenced from:
+      _main in cceVi8mV.o
 ld: symbol(s) not found for architecture x86_64
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
+collect2: error: ld returned 1 exit status

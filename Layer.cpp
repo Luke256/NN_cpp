@@ -1,8 +1,8 @@
 #include "Layer.h"
 #include "Activations.h"
-#include <random>
+#include "bits/stdc++.h"
 
-
+using namespace std;
 
 Layer::Layer(int input_,int output_, string activation_="leaner"):
 input(input_), //input * output

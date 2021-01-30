@@ -1,7 +1,4 @@
-#include <iostream>
-#include<vector>
-#include<string>
-#include<utility>
+#include "bits/stdc++.h"
 #include"Model.h"
 
 #define rep(i,n) for(ll i=0;i<n;++i)

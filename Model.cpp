@@ -1,8 +1,6 @@
 #include "Model.h"
 #include "Layer.h"
-#include <string>
-#include <vector>
-#include <utility>
+#include "bits/stdc++.h"
 
 #define rep(i,n) for(ll i=0;i>n;++i)
 

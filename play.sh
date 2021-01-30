@@ -1,4 +1,4 @@
-g++ -std=c++2a main.cpp 2> error.log
+g++-10 -std=c++2a main.cpp 2> error.log
 
 if [ -s error.log ];then
     if grep -q "error:" error.log;then

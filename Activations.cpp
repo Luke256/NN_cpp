@@ -1,5 +1,7 @@
 #include "Activations.h"
-#include <math.h>
+#include "bits/stdc++.h"
+
+using namespace std;
 
 Activation::Activation(string type_):
 type(type_)

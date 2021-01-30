@@ -1,7 +1,5 @@
 #pragma once
-#include <string>
-#include <vector>
-#include <utility>
+#include "bits/stdc++.h"
 #include "Layer.h"
 
 using namespace std;
