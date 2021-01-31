@@ -16,5 +16,5 @@ public:
     Activation activation;
     
     Layer(int input_,int output_, string activation_="leaner");
-    vector<double>forward(vector<double> input);
+    vector<double>forward(const vector<double>&input);
 };

@@ -19,7 +19,7 @@ activation(Activation(activation_))
     }
 }
 
-vector<double>Layer::forward(vector<double> input){
+vector<double>Layer::forward(const vector<double>&input){
      if(input.size()!=param[0].size()){
          cerr<<"Invalid shape. input's size is "<<input.size()<<", but param's size is "<<param.size()<<".";
          return input;

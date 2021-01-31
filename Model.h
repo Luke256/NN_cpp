@@ -11,6 +11,6 @@ private:
     int num_layers;
     
 public:
-    Model(int input_size,int output_size,int hidden_layers,vector<pair<int,string> >configs,string optimizer_);
-    vector<double> predict(vector<double>input);
+    Model(int input_size,int output_size,int hidden_layers,const vector<pair<int,string> >&configs,string optimizer_);
+    vector<double> predict(const vector<double>&input);
 };

@@ -4,15 +4,15 @@
 using namespace std;
 
 namespace Relu{
-    double forward(double x,map<string,double>data);
+    double forward(double x,map<string,double>&data);
 };
 
 namespace Sigmoid{
-    double forward(double x,map<string,double>data);
+    double forward(double x,map<string,double>&data);
 };
 
 namespace Leaner{
-    double forward(double x,map<string,double>data);
+    double forward(double x,map<string,double>&data);
 }
 
 class Activation{

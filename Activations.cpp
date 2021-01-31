@@ -12,15 +12,15 @@ double Activation::forward(double x){
     else if(type=="sigmoid") return Sigmoid::forward(x,data);
 }
 
-double Relu::forward(double x,map<string,double>data){
+double Relu::forward(double x,map<string,double>&data){
     if(x>0) return x;
     else return 0;
 }
 
-double Sigmoid::forward(double x,map<string,double>data){
+double Sigmoid::forward(double x,map<string,double>&data){
     return 1/(1+exp(-x));
 }
 
-double Leaner::forward(double x,map<string,double>data){
+double Leaner::forward(double x,map<string,double>&data){
     return x;
 }

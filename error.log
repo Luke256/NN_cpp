@@ -1,5 +1,59 @@
+Using built-in specs.
+COLLECT_GCC=g++-10
+COLLECT_LTO_WRAPPER=/usr/local/Cellar/gcc/10.2.0_3/libexec/gcc/x86_64-apple-darwin19/10.2.0/lto-wrapper
+Target: x86_64-apple-darwin19
+Configured with: ../configure --build=x86_64-apple-darwin19 --prefix=/usr/local/Cellar/gcc/10.2.0_3 --libdir=/usr/local/Cellar/gcc/10.2.0_3/lib/gcc/10 --disable-nls --enable-checking=release --enable-languages=c,c++,objc,obj-c++,fortran --program-suffix=-10 --with-gmp=/usr/local/opt/gmp --with-mpfr=/usr/local/opt/mpfr --with-mpc=/usr/local/opt/libmpc --with-isl=/usr/local/opt/isl --with-system-zlib --with-pkgversion='Homebrew GCC 10.2.0_3' --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --disable-multilib --with-native-system-header-dir=/usr/include --with-sysroot=/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk SED=/usr/bin/sed
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 10.2.0 (Homebrew GCC 10.2.0_3) 
+COLLECT_GCC_OPTIONS='-v' '-mmacosx-version-min=10.15.0' '-asm_macosx_version_min=10.15' '-shared-libgcc' '-mtune=core2'
+ /usr/local/Cellar/gcc/10.2.0_3/libexec/gcc/x86_64-apple-darwin19/10.2.0/cc1plus -quiet -v -D__DYNAMIC__ main.cpp -fPIC -quiet -dumpbase main.cpp -mmacosx-version-min=10.15.0 -mtune=core2 -auxbase main -version -o /var/folders/3m/_vgsffpd2hqdlkxklrvq5mf40000gp/T//ccNP4m78.s
+GNU C++14 (Homebrew GCC 10.2.0_3) version 10.2.0 (x86_64-apple-darwin19)
+	compiled by GNU C version 10.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.23-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/local/include"
+ignoring nonexistent directory "/usr/local/Cellar/gcc/10.2.0_3/lib/gcc/10/gcc/x86_64-apple-darwin19/10.2.0/../../../../../../x86_64-apple-darwin19/include"
+ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/Library/Frameworks"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/Cellar/gcc/10.2.0_3/lib/gcc/10/gcc/x86_64-apple-darwin19/10.2.0/../../../../../../include/c++/10.2.0
+ /usr/local/Cellar/gcc/10.2.0_3/lib/gcc/10/gcc/x86_64-apple-darwin19/10.2.0/../../../../../../include/c++/10.2.0/x86_64-apple-darwin19
+ /usr/local/Cellar/gcc/10.2.0_3/lib/gcc/10/gcc/x86_64-apple-darwin19/10.2.0/../../../../../../include/c++/10.2.0/backward
+ /usr/local/Cellar/gcc/10.2.0_3/lib/gcc/10/gcc/x86_64-apple-darwin19/10.2.0/include
+ /usr/local/Cellar/gcc/10.2.0_3/lib/gcc/10/gcc/x86_64-apple-darwin19/10.2.0/include-fixed
+ /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include
+ /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/System/Library/Frameworks
+End of search list.
+GNU C++14 (Homebrew GCC 10.2.0_3) version 10.2.0 (x86_64-apple-darwin19)
+	compiled by GNU C version 10.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.23-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: e926655a6510638fdf5e9c27d0467637
+COLLECT_GCC_OPTIONS='-v' '-mmacosx-version-min=10.15.0'  '-shared-libgcc' '-mtune=core2'
+ as -arch x86_64 -v -force_cpusubtype_ALL -mmacosx-version-min=10.15 -o /var/folders/3m/_vgsffpd2hqdlkxklrvq5mf40000gp/T//ccbQPiiB.o /var/folders/3m/_vgsffpd2hqdlkxklrvq5mf40000gp/T//ccNP4m78.s
+Apple clang version 12.0.0 (clang-1200.0.32.29)
+Target: x86_64-apple-darwin19.5.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1as -triple x86_64-apple-macosx10.15.0 -filetype obj -main-file-name ccNP4m78.s -target-cpu penryn -fdebug-compilation-dir /Users/s12410074/Desktop/C++/NN -dwarf-debug-producer "Apple clang version 12.0.0 (clang-1200.0.32.29)" -dwarf-version=4 -mrelocation-model pic -o /var/folders/3m/_vgsffpd2hqdlkxklrvq5mf40000gp/T//ccbQPiiB.o /var/folders/3m/_vgsffpd2hqdlkxklrvq5mf40000gp/T//ccNP4m78.s
+COMPILER_PATH=/usr/local/Cellar/gcc/10.2.0_3/libexec/gcc/x86_64-apple-darwin19/10.2.0/:/usr/local/Cellar/gcc/10.2.0_3/libexec/gcc/x86_64-apple-darwin19/10.2.0/:/usr/local/Cellar/gcc/10.2.0_3/libexec/gcc/x86_64-apple-darwin19/:/usr/local/Cellar/gcc/10.2.0_3/lib/gcc/10/gcc/x86_64-apple-darwin19/10.2.0/:/usr/local/Cellar/gcc/10.2.0_3/lib/gcc/10/gcc/x86_64-apple-darwin19/
+LIBRARY_PATH=/usr/local/Cellar/gcc/10.2.0_3/lib/gcc/10/gcc/x86_64-apple-darwin19/10.2.0/:/usr/local/Cellar/gcc/10.2.0_3/lib/gcc/10/gcc/x86_64-apple-darwin19/10.2.0/../../../
+COLLECT_GCC_OPTIONS='-v' '-mmacosx-version-min=10.15.0'  '-shared-libgcc' '-mtune=core2'
+ /usr/local/Cellar/gcc/10.2.0_3/libexec/gcc/x86_64-apple-darwin19/10.2.0/collect2 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/ -dynamic -arch x86_64 -macosx_version_min 10.15.0 -weak_reference_mismatches non-weak -o a.out -L/usr/local/Cellar/gcc/10.2.0_3/lib/gcc/10/gcc/x86_64-apple-darwin19/10.2.0 -L/usr/local/Cellar/gcc/10.2.0_3/lib/gcc/10/gcc/x86_64-apple-darwin19/10.2.0/../../.. /var/folders/3m/_vgsffpd2hqdlkxklrvq5mf40000gp/T//ccbQPiiB.o -lstdc++ -lSystem -lgcc_ext.10.5 -lgcc -lSystem -no_compact_unwind -v
+collect2 version 10.2.0
+/usr/bin/ld -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/ -dynamic -arch x86_64 -macosx_version_min 10.15.0 -weak_reference_mismatches non-weak -o a.out -L/usr/local/Cellar/gcc/10.2.0_3/lib/gcc/10/gcc/x86_64-apple-darwin19/10.2.0 -L/usr/local/Cellar/gcc/10.2.0_3/lib/gcc/10/gcc/x86_64-apple-darwin19/10.2.0/../../.. /var/folders/3m/_vgsffpd2hqdlkxklrvq5mf40000gp/T//ccbQPiiB.o -lstdc++ -lSystem -lgcc_ext.10.5 -lgcc -lSystem -no_compact_unwind -v
+@(#)PROGRAM:ld  PROJECT:ld64-609.8
+BUILD 15:07:46 Dec 18 2020
+configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+Library search paths:
+	/usr/local/Cellar/gcc/10.2.0_3/lib/gcc/10/gcc/x86_64-apple-darwin19/10.2.0
+	/usr/local/Cellar/gcc/10.2.0_3/lib/gcc/10
+	/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/lib
+Framework search paths:
+	/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/
 Undefined symbols for architecture x86_64:
-  "__ZN5ModelC1EiiiSt6vectorISt4pairIiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEESaIS8_EES7_", referenced from:
-      _main in cceVi8mV.o
+  "__ZN5ModelC1EiiiRKSt6vectorISt4pairIiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEESaIS8_EES7_", referenced from:
+      _main in ccbQPiiB.o
 ld: symbol(s) not found for architecture x86_64
 collect2: error: ld returned 1 exit status

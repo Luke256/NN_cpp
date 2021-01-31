@@ -7,7 +7,7 @@
 using namespace std;
 using ll=long long;
 
-Model::Model(int input_size,int output_size,int hidden_layers,vector<pair<int,string> >configs,string optimizer_):
+Model::Model(int input_size,int output_size,int hidden_layers,const vector<pair<int,string> >&configs,string optimizer_):
 optimizer(optimizer_),
 num_layers(hidden_layers+1)
 {
@@ -18,7 +18,7 @@ num_layers(hidden_layers+1)
     layers.push_back(Layer(configs[hidden_layers-1].first,output_size));
 }
 
-vector<double> Model::predict(vector<double> input){
+vector<double> Model::predict(const vector<double>&input){
     vector<vector<double> >outputs;
     outputs.push_back(input);
     rep(i,num_layers){

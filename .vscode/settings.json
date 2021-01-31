@@ -23,6 +23,8 @@
         "utility": "cpp",
         "valarray": "cpp",
         "vector": "cpp",
-        "type_traits": "cpp"
+        "type_traits": "cpp",
+        "csignal": "cpp",
+        "ctime": "cpp"
     }
 }
