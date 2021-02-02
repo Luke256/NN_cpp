@@ -47,14 +47,16 @@ vector<double>Model::fit(const vector<vector<double>>&x,const vector<vector<doub
     mt19937 mt;
     shuffle(sample.begin(),sample.end(),mt);
 
-    rep(i,epochs){
+    rep(epoch,epochs){
+        // バッチ作成
         vector<vector<double>>batch_x;
         vector<vector<double>>batch_y;
         rep(j,batch_size){
-            batch_x.push_back(sample[(i*batch_size+j)%sample.size()].first);
-            batch_y.push_back(sample[(i*batch_size+j)%sample.size()].second);
+            batch_x.push_back(sample[(epoch*batch_size+j)%sample.size()].first);
+            batch_y.push_back(sample[(epoch*batch_size+j)%sample.size()].second);
         }
 
+        // 誤差確認
         auto t=predict(batch_x);
         vector<double> error;
         if(loss_method=="cross_entropy_error") error=Loss::cross_entropy_error(y,t);
@@ -64,7 +66,9 @@ vector<double>Model::fit(const vector<vector<double>>&x,const vector<vector<doub
         loss/=batch_size;
         history.push_back(loss);
 
+        // 勾配計算
         auto grad=numical_gradient(loss_method,batch_x,batch_y);
+        // 最適化
         rep(l,num_layers){
             rep(j,layers[l].output){
                 rep(i,layers[l].input){
