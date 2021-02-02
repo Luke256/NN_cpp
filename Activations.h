@@ -1,5 +1,5 @@
 #pragma once
-#include "bits/stdc++.h"
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -13,7 +13,7 @@ namespace Sigmoid{
 
 namespace Leaner{
     double forward(double x,map<string,double>&data);
-}
+};
 
 class Activation{
     string type;

@@ -1,6 +1,5 @@
 #pragma once
-#include "bits/stdc++.h"
-
+#include <bits/stdc++.h>
 #include "Activations.h"
 
 #define rep(i,n) for(ll i=0;i<n;++i)
@@ -16,5 +15,5 @@ public:
     Activation activation;
     
     Layer(int input_,int output_, string activation_="leaner");
-    vector<double>forward(const vector<double>&input);
+    vector<vector<double>>forward(const vector<vector<double>>&input);
 };

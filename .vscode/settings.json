@@ -25,6 +25,7 @@
         "vector": "cpp",
         "type_traits": "cpp",
         "csignal": "cpp",
-        "ctime": "cpp"
+        "ctime": "cpp",
+        "iostream": "cpp"
     }
 }

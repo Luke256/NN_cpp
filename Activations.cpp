@@ -1,5 +1,5 @@
 #include "Activations.h"
-#include "bits/stdc++.h"
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -10,6 +10,8 @@ type(type_)
 double Activation::forward(double x){
     if(type=="relu") return Relu::forward(x,data);
     else if(type=="sigmoid") return Sigmoid::forward(x,data);
+    else if(type=="leaner") return Leaner::forward(x,data);
+    else return x;
 }
 
 double Relu::forward(double x,map<string,double>&data){
