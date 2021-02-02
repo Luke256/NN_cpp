@@ -154,6 +154,7 @@ vector<map<string,vector<vector<double>>>>Model::numical_gradient(string loss,co
 
 
 void Model::print_weights(){
+    // パラメータの重みを出力
     for(auto i:layers){
         cout<<"[";
         for(auto j:i.param){
