@@ -68,6 +68,10 @@ vector<double>Model::fit(const vector<vector<double>>&x,const vector<vector<doub
 
         // 勾配計算
         auto grad=numical_gradient(loss_method,batch_x,batch_y);
+
+        cout<<error[0]<<endl;
+        print_weights();
+        if(isnan(error[0])) exit(1);
         // 最適化
         rep(l,num_layers){
             rep(j,layers[l].output){
@@ -81,6 +85,7 @@ vector<double>Model::fit(const vector<vector<double>>&x,const vector<vector<doub
                 }
             }
         }
+
     }
     return history;
 }
@@ -112,10 +117,10 @@ vector<map<string,vector<vector<double>>>>Model::numical_gradient(string loss,co
                 layers[l].param[i][j]=tmp;
 
                 double gradient=0;
-                rep(k,y.size()){
-                    gradient+=(error_plus[i]-error_minus[i])/(2*1e-4);
+                rep(k,error_minus.size()){
+                    gradient+=(error_plus[k]-error_minus[k])/(2*(1e-4));
                 }
-                gradient/=y.size();
+                gradient/=error_minus.size();
                 grad[l]["param"][i][j]=gradient;
             }
 
@@ -140,11 +145,10 @@ vector<map<string,vector<vector<double>>>>Model::numical_gradient(string loss,co
             layers[l].bias[j]=tmp_bias;
 
             double gradient_bias=0;
-            rep(i,y.size()){
+            rep(i,error_minus_bias.size()){
                 gradient_bias+=(error_plus_bias[j]-error_minus_bias[j])/(2*1e-4);
             }
-            gradient_bias/=y.size();
-            cout<<gradient_bias<<endl;
+            gradient_bias/=error_minus_bias.size();
             grad[l]["bias"][0][j]=gradient_bias;
         }
     }
@@ -162,7 +166,7 @@ void Model::print_weights(){
             for(auto k:j){
                 cout<<k<<" ";
             }
-            cout<<"]"<<endl;
+            cout<<"]";
         }
         cout<<"]"<<endl<<"[";
         for(auto j:i.bias){

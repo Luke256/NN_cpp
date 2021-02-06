@@ -9,11 +9,10 @@ typedef unsigned long long ull;
 
 int main(){
     vector<pair<int,string> >config;
-    config.push_back(make_pair<int,string>(10,"leaner"));
-    config.push_back(make_pair<int,string>(10,"sigmoid"));
-    Model model(2,1,2,config);
+    config.push_back(make_pair<int,string>(5,"leaner"));
+    Model model(2,1,1,config);
     map<string,double> optimizer_option;
-    optimizer_option["learning_rate"]=0.001;
+    optimizer_option["learning_rate"]=0.0001;
     model.set_optimizer("sgd",optimizer_option);
     
 
@@ -30,17 +29,24 @@ int main(){
     y.push_back({0});
 
     model.print_weights();
+    auto t=model.predict(x);
+    for(auto i:t){
+        for(auto j:i){
+            cout<<j<<" ";
+        }
+        cout<<endl;
+    }
 
-    auto history=model.fit(x,y,1000,0,"mean_squared_error",4);
+    auto history=model.fit(x,y,10000,0,"mean_squared_error",4);
 
     cout<<"-------------------"<<endl;
     model.print_weights();
 
-    // auto t=model.predict(x);
-    // for(auto i:t){
-    //     for(auto j:i){
-    //         cout<<j<<" ";
-    //     }
-    //     cout<<endl;
-    // }
+    t=model.predict(x);
+    for(auto i:t){
+        for(auto j:i){
+            cout<<j<<" ";
+        }
+        cout<<endl;
+    }
 }

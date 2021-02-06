@@ -11,7 +11,6 @@ vector<double>Loss::cross_entropy_error(const vector<vector<double>>&y, const ve
     rep(i,y.size()){
         rep(j,y[0].size()){
             error[i]-=y[i][j]*log(t[i][j]+(1e-7));
-            if(!isnan(t[i][j]) && isnan(log(t[i][j]+(1e-7))))exit(1);
         }
     }
 
@@ -21,9 +20,12 @@ vector<double>Loss::cross_entropy_error(const vector<vector<double>>&y, const ve
 vector<double>Loss::mean_squared_error(const vector<vector<double>>&y, const vector<vector<double>>&t){
     vector<double>error(y.size(),0);
     rep(i,y.size()){
-        rep(j,y[0].size()){
-            error[i]+=pow(y[i][j]-t[i][j],2);
+        rep(j,y[i].size()){
+            double o=error[i];
+            error[i]+=pow(t[i][j]-y[i][j],2);
+            // cout<<o<<":"<<error[i]<<":"<<y[i][j]<<":"<<t[i][j]<<":"<<endl;
         }
+        error[i]/=2.0;
     }
 
     return error;

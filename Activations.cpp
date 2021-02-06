@@ -24,5 +24,5 @@ double Sigmoid::forward(double x,map<string,double>&data){
 }
 
 double Leaner::forward(double x,map<string,double>&data){
-    return x;
+    return x*1;
 }
